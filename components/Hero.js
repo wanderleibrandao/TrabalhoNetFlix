@@ -69,7 +69,7 @@ const TextButtonPlay = styled.Text`
 	padding-left: 5px;
 `
 
-const Hero = () => {
+const Hero = (props) => {
 	return (
 		<Container>
 			<Banner resizeMode='contain' source={require('../assets/banner.png')} />
@@ -79,7 +79,9 @@ const Hero = () => {
 				<MenuTag>Empolgantes</MenuTag>
 			</Tags>
 			<MenuHero>
-				<Button>
+				<Button /** onPress={() => {
+							props.onStackPressed && props.onStackPressed()
+						}} */>
 					<Feather name='plus' size={26} color='#FFF' />
 					<TextButton>Minha lista</TextButton>
 				</Button>

@@ -10,6 +10,8 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Movies from '../components/Movies'
 
+import {useSpring, animated, config} from 'react-spring';
+
 const api = [
 	require('../assets/movie1.jpg'),
 	require('../assets/movie2.jpg'),
@@ -27,11 +29,18 @@ const Poster = styled.ImageBackground`
 	height: ${(Dimensions.get('window').height * 81) / 100}px;
 `
 
+const AnimatedPoster = animated(Poster);
+
 const Gradient = styled(LinearGradient)`
 	height: 100%;
 `
 
-const Home = () => {
+const Home = (props) => {
+	const PosterConfigs = useSpring({
+		duration: 3000,
+		to: {opacity: 0},
+		from: {opacity: 1}
+	})
 	return (
 		<>
 			<StatusBar
@@ -40,7 +49,8 @@ const Home = () => {
 				barStyle='light-content'
 			/>
 			<Container>
-				<Poster source={require('../assets/poster.jpg')}>
+				<AnimatedPoster
+				 source={require('../assets/poster.jpg')}>
 					<Gradient
 						locations={[0, 0.2, 0.6, 0.93]}
 						colors={[
@@ -50,9 +60,11 @@ const Home = () => {
 							'rgba(0,0,0,1)'
 						]}>
 						<Header />
-						<Hero />
+						<Hero /** onStackPressed={()=>{
+							props.navigation.navigate('ChooseProfile');
+						}}*/ />
 					</Gradient>
-				</Poster>
+				</AnimatedPoster>
 				<Movies label='Recomendados' item={api} />
 				<Movies label='Top 10' item={api} />
 			</Container>
