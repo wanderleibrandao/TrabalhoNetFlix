@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { StatusBar, Dimensions } from 'react-native'
 
@@ -11,6 +11,7 @@ import Hero from '../components/Hero'
 import Movies from '../components/Movies'
 
 import {useSpring, animated, config} from 'react-spring';
+import { GetLocation } from '../services/MovieFilter'
 
 const api = [
 	require('../assets/movie1.jpg'),
@@ -36,6 +37,27 @@ const Gradient = styled(LinearGradient)`
 `
 
 const Home = (props) => {
+
+	// useEffect(() => {
+	// 	const loadingMovies = async () => {
+	// 		const moviesJson = require('../assets/Movies.json');
+	// 		const position = await getLocation();
+	// 		const nationalCountries = await filterByCountry(moviesJson, position);
+	// 		setNationalMovies(nationalCountries);
+
+	// 		const nationalCountriesTitle = nationalCountries.map(
+	// 			(item, index) => item.Title,
+	// 		);
+
+	// 		moviesWithoutNationals = moviesJson.filter((item, index) => {
+	// 			return !nationalCountriesTitle.includes(item.Title)
+	// 		});
+
+	// 		setMovies(moviesWithoutNationals);
+	// 	};
+	// 	loadingMovies();
+	// }, [movies]);
+
 	const PosterConfigs = useSpring({
 		duration: 3000,
 		to: {opacity: 0},
