@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -52,7 +54,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow Netflix to access your microphone</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Allow Netflix to access your device's accelerometer</string>
+	<string>Allow Netflix to access your device&apos;s accelerometer</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Give Netflix periences permission to save photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -74,5 +76,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Allow Netflix to access location when in use</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+  <string>Allow Netflix to access location when in use</string>
 </dict>
 </plist>

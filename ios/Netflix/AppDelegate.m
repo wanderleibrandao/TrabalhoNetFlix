@@ -13,6 +13,7 @@
 #import <UMCore/UMModuleRegistry.h>
 #import <UMReactNativeAdapter/UMNativeModulesProxy.h>
 #import <UMReactNativeAdapter/UMModuleRegistryAdapter.h>
+@import Firebase;
 
 @interface AppDelegate ()
 
@@ -39,7 +40,8 @@
 #endif
 
   [super application:application didFinishLaunchingWithOptions:launchOptions];
-
+  // Use Firebase library to configure APIs
+  [FIRApp configure];
   return YES;
 }
 

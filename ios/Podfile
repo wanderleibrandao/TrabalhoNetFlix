@@ -35,7 +35,8 @@ target 'Netflix' do
   pod 'DoubleConversion', :podspec => "#{rnPrefix}/third-party-podspecs/DoubleConversion.podspec"
   pod 'glog', :podspec => "#{rnPrefix}/third-party-podspecs/glog.podspec"
   pod 'Folly', :podspec => "#{rnPrefix}/third-party-podspecs/Folly.podspec"
-
+  pod 'Firebase/Analytics'
+  
   # Other native modules
 
   # Automatically detect installed unimodules
