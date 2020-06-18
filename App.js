@@ -10,10 +10,6 @@ import {Tabs} from './routes/Tabs';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {GetLocation} from './services/MovieFilter';
-
-GetLocation();
-
 
 const Stack = createStackNavigator();
 
