@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1078877162405",
+    "firebase_url": "https://netflixiesb.firebaseio.com",
+    "project_id": "netflixiesb",
+    "storage_bucket": "netflixiesb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078877162405:android:c54e46e2281627a0f6364c",
+        "android_client_info": {
+          "package_name": "netflix.rn.iesb.br"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078877162405-gidv655cvkjn00fv6lg000e0dj4hhpnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArPTw0GqgyAIYiFtBeKtxroIgvPXtatAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078877162405-gidv655cvkjn00fv6lg000e0dj4hhpnl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1078877162405-c00enarvjh3n9bd68cek2ae3h3hl858s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "netflix.rn.iesb.br"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
