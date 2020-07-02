@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react'
-import { Alert } from 'react-native';
-import Home from './screen/Home'
-import ChooseProfile from './screen/ChooseProfile';
+import React, { useEffect } from 'react';
 import ProfileToEdit from './screen/ProfileToEdit';
 import ChooseIcon from './screen/ChooseIcon';
 import CameraScreen from './screen/CameraScreen';
@@ -12,17 +9,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import messaging, { AuthorizationStatus } from '@react-native-firebase/messaging';
+import Snackbar from 'react-native-snackbar';
 
 async function requestUserPermission() {
   const authStatus = await messaging().requestPermission();
-  console.log('Authorization status:', authStatus);
-
-  const enabled =
-    authStatus === AuthorizationStatus.AUTHORIZED || authStatus === AuthorizationStatus.PROVISIONAL;
-
-  if (enabled) {
-    console.log('Authorization status: Permitido ', authStatus);
-  }
 }
 
 const requestPemission = requestUserPermission();
@@ -32,7 +22,9 @@ const Stack = createStackNavigator();
 const App = () => {
 	useEffect(() => {
 		const unsubscribe = messaging().onMessage(async remoteMessage => {
-		  Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+			const message = remoteMessage.notification.body ? remoteMessage.notification.body : "Ops...Alarme falso";
+			Snackbar.dismiss();
+			Snackbar.show({text: message, duration: Snackbar.LENGTH_INDEFINITE, action: {text: 'Ok', textColor: 'green', onPress: () => { /** nao quero fazer nada */}}});
 		});
 	
 		return unsubscribe;
