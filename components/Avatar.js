@@ -10,7 +10,6 @@ const Container = styled.TouchableOpacity`
 
 const avatarSize = css`
   width: ${(props) => {
-    console.log('avatarSize', props);
     return props.big ? '100px' : '60px';
   }};
   height: ${(props) => (props.big ? '100px' : '60px')};
@@ -51,7 +50,6 @@ const Editable = (props) => {
 };
 
 const Avatar = (props) => {
-  console.log('avatar', props);
   return (
     <Container style={{alignItems: 'center'}} onPress={props.onPress}>
       {props.uri ? (

@@ -32,7 +32,6 @@ const twoBytwo = (profiles) => {
 
 const ProfileToEdit = (props) => {
   useEffect(() => {
-    console.log('bateu no useEffect do ProfileToEdit');
     props.navigation.setOptions({
       title: 'Gerenciar perfis',
       headerTitleAlign: 'center',

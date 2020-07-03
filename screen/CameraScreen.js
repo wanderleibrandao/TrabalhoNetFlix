@@ -44,7 +44,6 @@ export default class CameraScreen extends React.Component {
                   const options = {quality: 0.5, base64: true};
                   let photo = await this.camera.takePictureAsync(options);
                   this.setState({isProcessingPhoto : false})
-                  console.log('tirou foto', photo);
                   this.props.navigation.navigate('More', {
                     image: photo.uri,
                     name: this.props.route.params.name,

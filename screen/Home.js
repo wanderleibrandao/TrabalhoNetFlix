@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
-
-import { StatusBar, Dimensions } from 'react-native'
-
+import React, { useEffect, useState, useContext } from 'react'
+import { StatusBar, Dimensions, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-
 import styled from 'styled-components/native'
 
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Movies from '../components/Movies'
-
+import { ProfileContext } from '../context/ProfileContext';
 import {useSpring, animated, config} from 'react-spring';
 import { GetLocation, getLocation, filterByCountry } from '../services/MovieFilter'
 
@@ -32,10 +29,24 @@ const Gradient = styled(LinearGradient)`
 const Home = () => {
 	const [movies, setMovies] = useState([]);
 	const [nationalMovies, setNationalMovies] = useState([]);
+	const [allMovies, setAllMovies] = useState([]);
+	const {user, setUser} = useContext(ProfileContext);
+	const [labelProfile, setLabelProfile] = useState('');
+
+	useEffect(() => {
+		const label = () => {
+			setLabelProfile(null);
+			if (user != null) {
+				setLabelProfile(`Continue assistindo como ${user}`);
+			}
+		}
+		label();
+	},[user]);
 
 	useEffect(() => {
 		const loadingMovies = async () => {
 			const moviesJson = require('../assets/Movies.json');
+			setAllMovies(moviesJson);
 			const position = await getLocation();
 			const nationalCountries = await filterByCountry(moviesJson, position);
 			setNationalMovies(nationalCountries);
@@ -83,6 +94,7 @@ const Home = () => {
 				</AnimatedPoster>
 				<Movies label='Recomendados' data={movies} />
 				<Movies label='Top 10' data={nationalMovies} />
+				{user ? <Movies label={labelProfile} data={allMovies} /> : <View />}
 			</Container>
 		</>
 	)

@@ -31,7 +31,6 @@ export const filterByCountry = async (movies, geolocation)  => {
 export const GetLocation = () => {
     Geolocation.getCurrentPosition(
         (info) => {
-            console.log(info);
             const position = {lat: info.coords.latitude, lng: info.coords.longitude};
             Geocoder.geocodePosition(position).then(res => {
                  console.log(res);
