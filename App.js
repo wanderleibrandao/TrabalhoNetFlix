@@ -22,31 +22,17 @@ const requestPemission = requestUserPermission();
 const Stack = createStackNavigator();
 
 const App = () => {
-	// const profileContext = useContext(ProfileContext);
 	const [user, setUser] = useState(null);
 	const value = {user, setUser};
 
-	// AsyncStorage.getItem('profile').then((result) => {
-	// 	console.log('profile carregado: ', result);
-	// 	setUser(result);
-	// });
 	getData = async () => {
 		try {
-		  const value = await AsyncStorage.getItem('profile')
-		  if(value !== null) {
-			// value previously stored
-		  }
+			return value = await AsyncStorage.getItem('profile')
 		} catch(e) {
-		  // error reading value
+			return null;
 		}
-	  }
+	}
 
-	// const changeProfile = (newProfile) => {
-	// 	console.log('changeProfile', newProfile.name);
-	// 	setUser(newProfile.name);
-	// }
-
-	// Tenho uma dúvida quanto à utilização do ProfileContext com functional components...
 	useEffect(() => {
 		const unsubscribe = messaging().onMessage(async remoteMessage => {
 			const message = remoteMessage.notification.body ? remoteMessage.notification.body : "Ops...Alarme falso";
@@ -65,10 +51,6 @@ const App = () => {
 						name="Tabs"
 						component={Tabs}
 						options={{headerShown: false}} />
-					{/* <Stack.Screen 
-						name="ChooseProfile"
-						component={ChooseProfile}
-						options={{headerShown: false}} /> */}
 					<Stack.Screen 
 						name="ProfileToEdit"
 						component={ProfileToEdit}
