@@ -44,27 +44,27 @@ let profilesAvailables = [
   {
     icon: require('../assets/avatars/avatar1.png'),
     name: 'José',
-    uri: null,
+    uri: 'https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/s320x320/97298653_526509991360463_5213687987757383680_n.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_ohc=RWX5y8rJdHUAX9K6U_h&oh=8ca2b3f60b78eabd066a52f242351bf7&oe=5F2C00D3',
   },
   {
     icon: require('../assets/avatars/avatar2.png'),
     name: 'Luiz',
-    uri: null,
+    uri: 'https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/s320x320/52651678_303650763677566_7471224984396890112_n.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_ohc=0BQJJcWZuxAAX_C24iZ&oh=81ff0eb611cd7bf2a2fccd3682000a69&oe=5F2CBEA8',
   },
   {
     icon: require('../assets/avatars/avatar3.png'),
     name: 'João',
-    uri: null,
+    uri: 'https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/11117183_1568595170061944_889008330_a.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_ohc=RYwusCNrBh8AX915kDm&oh=aef9c56e35c7b0dad19d0a0fe18d0f4e&oe=5F2C95EA',
   },
   {
     icon: require('../assets/avatars/avatar4.png'),
     name: 'Maria',
-    uri: null,
+    uri: 'https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/s320x320/83965957_177341466883829_3733440093445160960_n.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_ohc=tbL-OjxaEOsAX-NR_RG&oh=bc6494f1b7be669e59730365cd53ec9c&oe=5F2D0F91',
   },
   {
     icon: require('../assets/avatars/avatar5.png'),
     name: 'Pedro',
-    uri: null,
+    uri: 'https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/s320x320/105976043_273726223946388_319896007603273019_n.jpg?_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_ohc=z0EG0t47iwkAX-XwzLz&oh=7e2d9cc2757eb79439afbc375d1129b1&oe=5F2B883C',
   },
 ];
 

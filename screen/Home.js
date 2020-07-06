@@ -77,7 +77,7 @@ const Home = () => {
 			/>
 			<Container>
 				<AnimatedPoster
-				 source={require('../assets/poster.jpg')}>
+				 source={{uri: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/ujQthWB6c0ojlARk28NSTmqidbF.jpg'}}>
 					<Gradient
 						locations={[0, 0.2, 0.6, 0.93]}
 						colors={[
