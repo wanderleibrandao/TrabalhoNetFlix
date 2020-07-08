@@ -19,23 +19,12 @@ export const filterByCountry = async (movies, geolocation)  => {
         lat: geolocation.coords.latitude,
         lng: geolocation.coords.longitude,
     });
-    // console.log("geocoder: ", location);
-    
-    // console.log("movies: ", movies);
+
     const national = movies.filter((item, index) => {
         return (isYourCountry =
             item.Country.indexOf(location[0].country) !== -1 ||
             item.Country.indexOf(location[0].countryCode) !== -1);
     });
-    // console.log("filmes nacionais:", national);
-    // const national = movies.filter((user, index) => {
-    //     console.log(user);
-    //     user.filter((item, index) => {
-    //         return (isYourCountry =
-    //             item.Country.indexOf(location[0].country) !== -1 ||
-    //             item.Country.indexOf(location[0].countryCode) !== -1);
-    //     })
-    // });
     return national;
 };
 
