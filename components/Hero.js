@@ -92,7 +92,7 @@ const Hero = (props) => {
 				</Play>
 
 				<Button>
-					<Feather name='info' size={22} color='#FFF' />
+					<Feather name='info' size={26} color='#FFF' />
 					<TextButton>Saiba mais</TextButton>
 				</Button>
 			</MenuHero>

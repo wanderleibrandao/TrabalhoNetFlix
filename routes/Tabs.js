@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 
 export const Tabs = () => {
     return (
-        <Tab.Navigator
+        <Tab.Navigator initialRouteName = "Home"
             tabBarOptions={{
                 activeTintColor: 'white',
                 style: {
